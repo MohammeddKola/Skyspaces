@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cart - Crew</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .cart{max-width:900px;margin:30px auto;padding:20px;background:#fff;border-radius:8px}
+  .cart-item{display:flex;gap:12px;align-items:center;border-bottom:1px solid #eee;padding:12px 0}
+  .cart-item img{width:80px;height:80px;object-fit:cover;border-radius:6px}
+  .qty input{width:60px}
+  .actions{display:flex;gap:12px;justify-content:flex-end;margin-top:16px}
+  .btn{padding:10px 14px;border-radius:6px;border:none;cursor:pointer}
+  .btn.primary{background:#0f3460;color:#fff}
+  .btn.ghost{background:#eee}
+</style>
+</head>
+<body>
+<header> Skyspaces </header>
+
+<main class="cart">
+  <h1>Your Cart</h1>
+  <div id="cartItems"></div>
+  <p style="text-align:right;font-weight:700">Total: ₹<span id="cartTotal">0</span></p>
+  <div class="actions">
+    <button class="btn ghost" id="clearCart">Clear Cart</button>
+    <button class="btn primary" id="proceedCheckout">Proceed to Checkout</button>
+  </div>
+</main>
+
+<script>
+function getCart(){return JSON.parse(localStorage.getItem('cart')||'[]')}
+function saveCart(c){localStorage.setItem('cart',JSON.stringify(c))}
+function calcTotal(cart){
+  return cart.reduce((s,i)=>s + (parseFloat(i.price) * (i.qty||1)), 0).toFixed(2);
+}
+function renderCart(){
+  const cart = getCart();
+  const container = document.getElementById('cartItems');
+  container.innerHTML = '';
+  if(cart.length===0){ container.innerHTML = '<p>Your cart is empty.</p>'; document.getElementById('cartTotal').textContent='0'; return;}
+  cart.forEach((item,idx)=>{
+    const div = document.createElement('div');
+    div.className='cart-item';
+    div.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div style="flex:1">
+        <h3 style="margin:0">${item.name}</h3>
+        <p style="margin:6px 0">₹${item.price}</p>
+        <div class="qty">Qty: <input type="number" min="1" value="${item.qty||1}" data-idx="${idx}" style="width:60px"></div>
+      </div>
+      <div>
+        <button data-remove="${idx}" style="background:#ff6b6b;border:none;color:#fff;padding:8px;border-radius:6px;cursor:pointer">Remove</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+  document.getElementById('cartTotal').textContent = calcTotal(cart);
+  // attach events
+  container.querySelectorAll('input[type="number"]').forEach(inp=>{
+    inp.addEventListener('change', e=>{
+      const i = parseInt(e.target.dataset.idx,10);
+      const cart = getCart();
+      cart[i].qty = Math.max(1, parseInt(e.target.value,10) || 1);
+      saveCart(cart); renderCart();
+    });
+  });
+  container.querySelectorAll('button[data-remove]').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const i = parseInt(e.target.getAttribute('data-remove'),10);
+      const cart = getCart(); cart.splice(i,1); saveCart(cart); renderCart();
+    });
+  });
+}
+
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart'); renderCart();
+});
+
+document.getElementById('proceedCheckout').addEventListener('click', ()=>{
+  // go to checkout page; we'll fetch cart from localStorage there
+  window.location.href = 'checkout.html';
+});
+
+renderCart();
+</script>
+</body>
+</html>

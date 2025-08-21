@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #0d1b2a;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #f4a261;
+}
+
+/* Main background section */
+.hero-section {
+    height: calc(100vh - 80px); /* Adjust based on your header height */
+    background: url('images/Crew Products1.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+/* Optional dark overlay for better text visibility */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0, 0, 0.4); /* Adjust darkness */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Keep text above overlay */
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ffaa00;
+}
+
+/* product section css */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background: #0f3460;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    height:max-content;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #e94560;
+}
+
+/* Main Titles */
+h1, h2 {
+    text-align: center;
+    margin: 30px 0;
+    color: #222;
+}
+
+/* Product Grid */
+.product-grid-container{
+  position: relative;
+    padding: 20px 50px;
+}
+.product-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+.product-grid::-webkit-scrollbar {
+    display: none;
+}
+.product-grid .product {
+    flex: 0 0 220px;
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+    padding: 20px 50px;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .product {
+    flex: 0 0 220px;
+}
+
+/* Product Card */
+.product {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+}
+
+.product p {
+    color: #e94560;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background: #0f3460;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Arrows */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0f3460;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.slider-btn:hover {
+    background: #e94560;
+}
+
+.home-left-btn { left: 10px; }
+.home-right-btn { right: 10px; }
+.prod-left-btn { left: 10px; }
+.prod-right-btn { right: 10px; }
+.prod-left-btns { left: 10px; }
+.prod-right-btns { right: 10px; }
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.modal-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addToCartBtn {
+  background: #007bff;
+  color: white;
+}
+
+#buyNowBtn {
+  background: #28a745;
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}

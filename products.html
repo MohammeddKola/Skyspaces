@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crew - Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/skyspaceslogo.webp" alt="Crew Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- All Products Grid -->
+        <section>
+            <div class="product-grid-container">
+                <h1>Our Products</h1>
+                <button class="slider-btn prod-left-btns">&#10094;</button>
+                <div class="product-grid" id="all-products"></div>
+                <button class="slider-btn prod-right-btns">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Featured Products Slider -->
+        <section>
+            <h2>Featured Products</h2>
+            <div class="slider-container">
+                <button class="slider-btn prod-left-btn">&#10094;</button>
+                <div class="slider" id="products-featured-slider"></div>
+                <button class="slider-btn prod-right-btn">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Popup Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <h2 id="modalName"></h2>
+            <p id="modalPrice"></p>
+            <div class="modal-buttons">
+                <button id="addToCartBtn">Add to Cart</button>
+                <button id="buyNowBtn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Crew Cleaning Products. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

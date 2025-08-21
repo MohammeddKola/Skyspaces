@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crew Home Cleaning Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/skyspaceslogo.webp" alt="Crew Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Crew Cleaning Products</h1>
+        <p>Premium cleaning solutions for your home and business.</p>
+    </div>
+</main>
+<!-- Featured Products Slider on Homepage -->
+<section>
+    <h2>Best Selling Products</h2>
+    <div class="slider-container">
+        <button class="slider-btn home-left-btn">&#10094;</button>
+        <div class="slider" id="home-featured-slider"></div>
+        <button class="slider-btn home-right-btn">&#10095;</button>
+    </div>
+</section>
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
+    <div class="modal-buttons">
+      <button id="addToCartBtn">Add to Cart</button>
+      <button id="buyNowBtn">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Crew Cleaning Products. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

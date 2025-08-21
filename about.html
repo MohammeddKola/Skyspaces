@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sky Spaces</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header1 {
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header1 h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+        .header1 p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 40px;
+            background: white;
+        }
+        .products h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .product img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product p {
+            color: #0077b6;
+            font-weight: bold;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 40px;
+            background: #f0f8ff;
+        }
+        .team h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .team-member h3 {
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro Section -->
+    <header>
+            <div class="logo">
+                <img src="images/skyspaceslogo.webp" alt="Crew Logo">
+            </div>
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+     </nav>      
+    </header>
+
+    <div class="header1">
+    <h1>About Sky Spaces</h1>
+        <p>
+            Sky Ventures is a leading supplier of hygiene and cleaning supplies, offering a wide range of products from the Diversey line, including Suma, Taski, and Crew. Diversey is a global leader in hygiene and cleaning solutions, and Sky Ventures is proud to partner with them to bring the best products to their customers.
+            <br><br>
+            Suma products are specifically designed for use in commercial kitchens and foodservice areas. They offer a range of cleaning solutions, including degreasers, oven cleaners, and dishwashing detergents.
+            <br><br>
+            Taski products are designed for use in a wide range of commercial settings, including hotels, hospitals, and offices. They offer floor cleaners, carpet cleaners, and glass cleaners.
+            <br><br>
+            Crew products are designed for industrial settings, including manufacturing facilities and warehouses, offering degreasers, disinfectants, and floor cleaners.
+            <br><br>
+            Sky Ventures understands the importance of maintaining a clean and hygienic environment, and they are committed to providing their customers with the best products to meet their needs.
+        </p>
+    </div>
+
+    <!-- Products Section -->
+    <!-- <section class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/diversey Cleaning Chemicals.webp" alt="Crew Floor Cleaner">
+                <h3>Crew Floor Cleaner</h3>
+                <p>₹299</p>
+            </div>
+            <div class="product">
+                <img src="products/taski.jpg" alt="Taski Product">
+                <h3>Taski Floor Cleaner</h3>
+                <p>₹699</p>
+            </div>
+            <div class="product">
+                <img src="products/crew.jpg" alt="Crew Product">
+                <h3>Crew Disinfectant</h3>
+                <p>₹299</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="team/member1.jpg" alt="Team Member">
+                <h3>Zaid Shabandari</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="team/member2.jpg" alt="Team Member">
+                <h3>Mohammed Hussain</h3>
+                <p>Web Developer</p>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+</html>
+
+<!--
+        
+         -->
+
