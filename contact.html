@@ -153,16 +153,16 @@
 
 	<script>
 	function initMap() {
-		var bhatkal = {lat: 13.994295, lng: 74.548841};
+		var bangalore = {lat: 12.90614809588696677, lng: 77.59379363558216};
 		var mapOptions = {
-			center: bhatkal,
+			center: bangalore,
 			zoom: 16
 		};
 		var googlemap = new google.maps.Map(document.getElementById("google-map"), mapOptions);
 		var marker = new google.maps.Marker({
-                position: bhatkal, // marker pointing to the location.
+                position: bangalore, // marker pointing to the location.
                 map: googlemap,
-				title:"bhatkal,karnataka"
+				title:"bangalore,karnataka"
             });
 	}
 
@@ -186,3 +186,4 @@
 
 </body>
 </html>
+
