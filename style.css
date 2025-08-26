@@ -208,7 +208,7 @@ h1, h2 {
 }
 
 .product p {
-    color: #e94560;
+    color: #111827;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -313,3 +313,4 @@ h1, h2 {
   from {opacity: 0; transform: scale(0.8);}
   to {opacity: 1; transform: scale(1);}
 }
+
